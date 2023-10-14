@@ -17,11 +17,11 @@ const parisienne = Parisienne({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-parisienne",
-})
+});
 
 export const metadata: Metadata = {
-  title: "Wedding App",
-  description: "Ini deskripsi aplikasi undangan pernikahan",
+  title: "Undangan Untuk Anda",
+  description: "Silahkan dibuka undangan tersebut, terimakasih",
 };
 
 export default function RootLayout({
@@ -30,7 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={` ${poppins.variable} ${inter.variable} ${parisienne.variable}`}>
+    <html
+      lang="en"
+      className={` ${poppins.variable} ${inter.variable} ${parisienne.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
