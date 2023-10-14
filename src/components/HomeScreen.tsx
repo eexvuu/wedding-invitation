@@ -3,20 +3,30 @@ import React from "react";
 import background from "@/assets/bg.jpg";
 import aksesoris from "@/assets/aksesoris.png";
 import Link from "next/link";
+import Head from "next/head";
 
 interface HomeScreenProps {
   namaPria: string;
   namaWanita: string;
   namaTamu: string;
+  metaTitle?: string;
 }
 
 const HomeScreen: React.FC<HomeScreenProps> = ({
   namaPria,
   namaWanita,
   namaTamu,
+  metaTitle,
 }) => {
   return (
     <main className="min-h-screen w-full relative">
+      <Head>
+        <title>Undangan Pernikahan kepada {metaTitle}</title>
+        <meta name="description" content="Ini deskripsi" key="desc" />
+        <meta property="og:title" content="Ini title" />
+        <meta property="og:description" content="ini deskripsi 2" />
+        <meta property="og:image" content={background.src} />
+      </Head>
       <Image
         src={background}
         alt="background image"
@@ -34,7 +44,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
         height={250}
         className="absolute bottom-0 left-0 rotate-180 animate-pulse"
       />
-      <div className="container relative  mx-auto ">
+      <div className="container relative mx-auto py-6">
         <div className="text-center text-slate-800 flex flex-col justify-center items-center h-screen space-y-16">
           <h1 className="text-xl font-semibold uppercase tracking-wide">
             Undangan Pernikahan
@@ -46,8 +56,14 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
           </div>
           <div className="flex items-center justify-center ">
             <div className="bg-white font-semibold text-center rounded-3xl border shadow-xl p-10 max-w-xs">
-              <h3 className=" text-slate-600 text-base"> Kepada Saudara/i : </h3>
-              <h1 className="text-xl text-gray-700 mt-4 font-bold"> {namaTamu} </h1>
+              <h3 className=" text-slate-600 text-base">
+                {" "}
+                Kepada Saudara/i :{" "}
+              </h3>
+              <h1 className="text-xl text-gray-700 mt-4 font-bold">
+                {" "}
+                {namaTamu}{" "}
+              </h1>
               <Link href="/home">
                 <button className="bg-[#F5DCD0] px-8 py-2 mt-4 rounded-3xl text-black font-semibold tracking-wide">
                   Buka Undangan

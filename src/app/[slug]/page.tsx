@@ -33,6 +33,7 @@ export default function Tamu(props: tamuProps) {
           namaPria={data.namaMempelaiPria}
           namaWanita={data.namaMempelaiWanita}
           namaTamu={formattedSlug}
+          metaTitle={formattedSlug}
         />
       )}
     </>
