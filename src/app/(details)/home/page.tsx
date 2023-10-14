@@ -1,5 +1,6 @@
 "use client";
 
+import Music from "@/components/Music";
 import getData from "@/lib/data";
 import { WeddingData } from "@/types/weddingData";
 import { useEffect, useState } from "react";
@@ -16,14 +17,17 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div>
-      <h1>Informasi</h1>
-      <div>
-        <h2>pria : {data?.namaMempelaiPria}</h2>
+    <>
+      <Music />
+      <div className="bg-yellow-500">
+        <h1>Informasi</h1>
+        <div>
+          <h2>pria : {data?.namaMempelaiPria}</h2>
+        </div>
+        <div>
+          <h2>pria : {data?.namaMempelaiWanita}</h2>
+        </div>
       </div>
-      <div>
-        <h2>pria : {data?.namaMempelaiWanita}</h2>
-      </div>
-    </div>
+    </>
   );
 }
