@@ -25,7 +25,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
         <meta name="description" content="Ini deskripsi" key="desc" />
         <meta property="og:title" content="Ini title" />
         <meta property="og:description" content="ini deskripsi 2" />
-        <meta property="og:image" content={background.src} />
+        <meta property="og:image" content="https://placehold.co/600x400" />
       </Head>
       <Image
         src={background}

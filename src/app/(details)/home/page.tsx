@@ -1,20 +1,9 @@
-"use client";
+
 
 import Music from "@/components/Music";
-import getData from "@/lib/data";
-import { WeddingData } from "@/types/weddingData";
-import { useEffect, useState } from "react";
-export default function AboutPage() {
-  const [data, setData] = useState<WeddingData | null>(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const details = getData();
-      setData(details.data);
-    };
-
-    fetchData();
-  }, []);
+import { fetchData } from "@/lib/fetchData";
+export default async function AboutPage() {
+  const data = await fetchData();
 
   return (
     <>
