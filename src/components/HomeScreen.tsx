@@ -3,7 +3,6 @@ import React from "react";
 import background from "@/assets/bg.jpg";
 import aksesoris from "@/assets/aksesoris.png";
 import Link from "next/link";
-import Head from "next/head";
 
 interface HomeScreenProps {
   namaPria: string;
@@ -16,6 +15,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
   namaWanita,
   namaTamu,
 }) => {
+  
   return (
     <>
       <main className="min-h-screen w-full relative">
@@ -57,7 +57,9 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
                   {namaTamu}{" "}
                 </h1>
                 <Link href="/home">
-                  <button className="bg-[#F5DCD0] px-8 py-2 mt-4 rounded-3xl text-black font-semibold tracking-wide">
+                  <button
+                    className="bg-[#F5DCD0] px-8 py-2 mt-4 rounded-3xl text-black font-semibold tracking-wide"
+                  >
                     Buka Undangan
                   </button>
                 </Link>

@@ -10,10 +10,10 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // read route params
-  const slug = params.slug;
+  const formattedSlug = params.slug.replace(/-/g, " ");
 
   return {
-    title: `Undangan Untuk ${slug}`,
+    title: `Undangan Untuk ${formattedSlug}`,
     description: "Silahkan dibuka undangan tersebut, terimakasih",
   };
 }
