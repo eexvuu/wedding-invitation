@@ -1,13 +1,10 @@
 
-
-import Music from "@/components/Music";
 import { fetchData } from "@/lib/fetchData";
 export default async function AboutPage() {
   const data = await fetchData();
 
   return (
     <>
-      <Music />
       <div className="bg-yellow-500">
         <h1>Informasi</h1>
         <div>
