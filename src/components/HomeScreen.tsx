@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import background from "@/assets/bg.jpg";
 import aksesoris from "@/assets/aksesoris.png";
 import Link from "next/link";
+import music from "../assets/backsound.mp3";
 
 interface HomeScreenProps {
   namaPria: string;
@@ -15,7 +18,9 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
   namaWanita,
   namaTamu,
 }) => {
-  
+  const playMusic = () => {
+    new Audio(music).play();
+  };
   return (
     <>
       <main className="min-h-screen w-full relative">
@@ -59,6 +64,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
                 <Link href="/home">
                   <button
                     className="bg-[#F5DCD0] px-8 py-2 mt-4 rounded-3xl text-black font-semibold tracking-wide"
+                    onClick={playMusic}
                   >
                     Buka Undangan
                   </button>
