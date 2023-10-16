@@ -1,9 +1,10 @@
 import Intro from "@/components/Intro";
+import Music from "@/components/Music";
 import Pengantin from "@/components/Pengantin";
-import { fetchData } from "@/lib/fetchData";
+import getData from "@/lib/data";
 
-export default async function AboutPage() {
-  const data = await fetchData();
+export default function AboutPage() {
+  const data =  getData().data
 
   return (
     <>
@@ -19,7 +20,7 @@ export default async function AboutPage() {
             namaPria={data.namaMempelaiPria}
             namaWanita={data.namaMempelaiWanita}
           />
-          
+          <Music />
         </>
       )}
     </>
