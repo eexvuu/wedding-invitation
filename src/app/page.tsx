@@ -11,6 +11,7 @@ export default async function Index() {
           <HomeScreen
             namaPria={data.namaMempelaiPria}
             namaWanita={data.namaMempelaiWanita}
+            background={data.background}
             namaTamu="Anda"
           />
         </>

@@ -3,4 +3,5 @@ export type WeddingData = {
   namaMempelaiWanita: string;
   tanggalPernikahan: string;
   tempatPernikahan: string;
+  background: any;
 };

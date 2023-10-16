@@ -2,21 +2,22 @@
 
 import Image from "next/image";
 import React from "react";
-import background from "@/assets/bg.jpg";
 import aksesoris from "@/assets/aksesoris.png";
 import Link from "next/link";
 import music from "../assets/backsound.mp3";
 
-interface HomeScreenProps {
+export type HomeScreenProps = {
   namaPria: string;
   namaWanita: string;
-  namaTamu: string;
-}
+  namaTamu?: string;
+  background: string;
+};
 
 const HomeScreen: React.FC<HomeScreenProps> = ({
   namaPria,
   namaWanita,
   namaTamu,
+  background,
 }) => {
   const playMusic = () => {
     new Audio(music).play();
@@ -41,8 +42,8 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
           height={250}
           className="absolute bottom-0 left-0 rotate-180 animate-pulse"
         />
-        <div className="container relative mx-auto py-6">
-          <div className="text-center text-slate-800 flex flex-col justify-center items-center h-screen space-y-16">
+        <div className="container relative mx-auto ">
+          <div className="text-center text-slate-800 flex flex-col justify-center items-center h-screen space-y-12">
             <h1 className="text-xl font-semibold uppercase tracking-wide">
               Undangan Pernikahan
             </h1>

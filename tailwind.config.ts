@@ -17,6 +17,9 @@ const config: Config = {
         poppins: ['var(--font-poppins)'],
         inter: ['var(--font-inter)'],
         parisienne: ['var(--font-parisienne)'],
+      },
+      scale: {
+        '-100': '-1',
       }
     },
   },

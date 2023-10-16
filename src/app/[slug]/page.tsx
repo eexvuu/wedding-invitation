@@ -30,6 +30,7 @@ export default async function Tamu(props: Props) {
           namaPria={data.namaMempelaiPria}
           namaWanita={data.namaMempelaiWanita}
           namaTamu={formattedSlug}
+          background={data.background}
         />
       )}
     </>
