@@ -40,10 +40,10 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
         />
         <div className="container relative mx-auto ">
           <div className="text-center text-slate-800 flex flex-col justify-center items-center h-screen space-y-12">
-            <h1 className="text-xl font-semibold uppercase tracking-wide">
+            <h1 className="text-lg font-semibold uppercase tracking-wide">
               Undangan Pernikahan
             </h1>
-            <div className="text-7xl font-parisienne">
+            <div className="text-5xl font-parisienne space-y-4">
               <h1>{namaPria}</h1>
               <h1>&</h1>
               <h1>{namaWanita}</h1>

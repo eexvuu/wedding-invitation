@@ -4,9 +4,23 @@ import { motion, useInView, useAnimation } from "framer-motion";
 
 interface Props {
   children: React.ReactNode;
+  yHidden?: number;
+  yVisible?: number;
+  xHidden?: number;
+  xVisible?: number;
+  scaleHidden?: number;
+  scaleVisible?: number;
 }
 
-export const RevealAnimation = ({ children }: Props) => {
+export const RevealAnimation = ({
+  children,
+  yHidden = 0,
+  yVisible = 0,
+  xHidden = 0,
+  xVisible = 0,
+  scaleHidden = 1,
+  scaleVisible = 1,
+}: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
@@ -21,11 +35,16 @@ export const RevealAnimation = ({ children }: Props) => {
   }, [isInView]);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="relative">
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: yHidden, x: xHidden, scale: scaleHidden },
+          visible: {
+            opacity: 1,
+            y: yVisible,
+            x: xVisible,
+            scale: scaleVisible,
+          },
         }}
         initial="hidden"
         animate={mainControls}

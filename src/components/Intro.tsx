@@ -19,15 +19,16 @@ const Intro: React.FC<HomeScreenProps> = ({
         />
         <div className="relative container mx-auto  flex flex-col items-center justify-center min-h-screen px-12">
           <div className="text-center space-y-3">
-            <RevealAnimation>
+            <RevealAnimation yHidden={75} yVisible={0}>
               <p className="text-lg tracking-wide">Assalamu'aikum Wr. Wb.</p>
-
-              <p className="py-5">
+              <p className="py-5 leading-6">
                 Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala.
                 InsyaAllah Kami akan menyelenggarakan acara pernikahan
               </p>
-              <p className="font-parisienne text-4xl">
-                {namaPria} & {namaWanita}
+              <p className="font-parisienne text-4xl my-3">
+                <p>{namaPria}</p>
+                <p>&</p>
+                <p>{namaWanita}</p>
               </p>
               <p>Minggu, 25 Januari 2030</p>
             </RevealAnimation>
